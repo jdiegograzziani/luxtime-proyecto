@@ -1,0 +1,280 @@
+/* Encabezado */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+header {
+    background-color: #00023d;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+
+/* --- ESTILO GENERAL --- */
+body {
+  font-family: "Poppins", "Helvetica Neue", sans-serif;
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.catalogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 100px;
+  gap: 40px;
+}
+
+/* --- TARJETA DE RELOJ --- */
+.reloj {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #ffffff;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.reloj:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* --- IMAGEN DEL PRODUCTO --- */
+.reloj img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-right: 30px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.reloj:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* --- INFORMACIÓN DEL PRODUCTO --- */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info h2 {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 600;
+  color: #111;
+}
+
+.precio {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+  margin: 5px 0;
+}
+
+.estrellas {
+  color: #f0b400;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+.descripcion {
+  margin: 10px 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 700px;
+}
+
+.material {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .reloj {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .reloj img {
+    margin: 0 0 20px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .descripcion {
+    max-width: 100%;
+  }
+}
+
+/* Pie de Pagina con informzacion */
+
+footer {
+  background-color: #00023d;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  padding: 20px 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-left strong {
+  color: #c9a033;
+  font-size: 1rem;
+}
+
+.footer-center a {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Links y textos */
+.footer-center a {
+  text-decoration: none;
+}
+
+.footer-right span {
+  margin-right: 10px;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    justify-content: center;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-content {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* Funcional en Tablet */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Funcional en Telefonos */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 0.5 rem;
+    }
+}
